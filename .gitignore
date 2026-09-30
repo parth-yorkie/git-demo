@@ -1,0 +1,62 @@
+# =============================================================================
+# Web Audit Checker — WordPress (Local by Flywheel)
+# Tracks custom York IE code under wp-content; excludes core, media, and secrets.
+# =============================================================================
+
+# --- OS & editors ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# --- Local by Flywheel ---
+local-xdebuginfo.php
+
+# --- Secrets & environment (use wp-config-sample.php as a template) ---
+wp-config.php
+.env
+.env.*
+!.env.example
+
+# --- WordPress core (install/update via Local or wordpress.org) ---
+/wp-admin/
+/wp-includes/
+/wp-*.php
+!wp-config-sample.php
+/xmlrpc.php
+/readme.html
+/license.txt
+/index.php
+/.htaccess
+
+# --- wp-content: runtime & generated ---
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/debug.log
+/wp-content/backups/
+/wp-content/backup-db/
+/wp-content/fatal-error-handler.php
+
+# --- Third-party plugins (not maintained in this repo) ---
+/wp-content/plugins/wpide/
+/wp-content/plugins/download-plugin/
+
+# --- Bundled default themes ---
+/wp-content/themes/twentytwenty*/
+
+# --- Dependencies & build output (if added to custom plugins/themes) ---
+node_modules/
+/vendor/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Archives & database dumps ---
+*.sql
+*.sql.gz
+*.zip
+*.tar
+*.tar.gz
